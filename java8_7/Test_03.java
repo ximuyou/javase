@@ -4,14 +4,14 @@ public class Test_03 {
 	public static void main(String[] args) {
 		int[] arr = { 2, 3, 45, 666, 0 };
 		maopao m = new maopao();
-		charu c=new charu();
+		charu c = new charu();
 		xuanze x = new xuanze();
 		m.setArr(arr);
 		x.setArr(arr);
 		c.setArr(arr);
 		getmessiage(m, arr);
 		getmessiage(x, arr);
-        getmessiage(c, arr);
+		getmessiage(c, arr);
 	}
 
 	static void getmessiage(circle c, int[] arr) {
@@ -59,7 +59,7 @@ class xuanze implements circle {
 
 	public void cir() {
 		for (int i = 0; i < arr.length - 1; i++) {
-			for (int j = i; j < arr.length ; j++) {
+			for (int j = i; j < arr.length; j++) {
 				if (arr[i] < arr[j]) {
 					int n = arr[i];
 					arr[i] = arr[j];
@@ -78,21 +78,22 @@ class xuanze implements circle {
 	}
 
 }
-class charu implements circle{
-	private int[]arr;
+
+class charu implements circle {
+	private int[] arr;
 
 	public void cir() {
-        for(int i=0;i<arr.length-1;i++){
-        	for(int j=i+1;j>0;j--){
-        		if(arr[j-1]>arr[j]){
-        			int n=arr[j-1];
-        			arr[j-1]=arr[j];
-        			arr[j]=n;
-        		
-        		}
-        		else break;
-        	}
-        }
+		for (int i = 0; i < arr.length - 1; i++) {
+			for (int j = i + 1; j > 0; j--) {
+				if (arr[j - 1] > arr[j]) {
+					int n = arr[j - 1];
+					arr[j - 1] = arr[j];
+					arr[j] = n;
+
+				} else
+					break;
+			}
+		}
 	}
 
 	public int[] getArr() {
